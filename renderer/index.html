@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'" />
+    <title>Cursor workflows</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <aside class="rail">
+      <header class="rail-head">
+        <p class="eyebrow">Registry</p>
+        <h1>Workflows</h1>
+      </header>
+      <p id="none" class="none">No packages registered.</p>
+      <ul id="list" class="list"></ul>
+      <p id="problems" class="problems" hidden></p>
+    </aside>
+    <main class="stage">
+      <section id="empty" class="empty">
+        <h2 id="empty-title">Nothing registered</h2>
+        <p id="empty-copy">Workflows are Go packages. Each one calls <code>registry.Register</code> from <code>init</code>. This list stays empty until a package is registered.</p>
+      </section>
+      <section id="detail" class="detail" hidden>
+        <header class="detail-head">
+          <div>
+            <p class="eyebrow">Go package</p>
+            <h2 id="title"></h2>
+            <p id="description"></p>
+            <p id="meta" class="meta"></p>
+          </div>
+          <div class="actions">
+            <button id="run" type="button" class="primary">Run</button>
+            <button id="reset" type="button" class="ghost">Reset</button>
+            <button id="cancel" type="button" class="ghost" hidden>Cancel</button>
+          </div>
+        </header>
+        <ol id="steps" class="steps"></ol>
+        <div id="transcript" class="transcript"></div>
+        <form id="composer" class="composer">
+          <textarea id="prompt" rows="3" placeholder="Vibe code this package"></textarea>
+          <button type="submit" class="primary">Send</button>
+        </form>
+      </section>
+      <footer id="status" class="status"></footer>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>

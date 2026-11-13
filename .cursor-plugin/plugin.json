@@ -1,0 +1,15 @@
+{
+  "name": "cursor-workflows",
+  "displayName": "Workflows",
+  "version": "0.1.0",
+  "description": "Create Cursor SDK workflows as Go packages with visible steps.",
+  "author": {
+    "name": "nicholasaperry"
+  },
+  "repository": "https://github.com/nicholasaperry/cursor-workflows",
+  "keywords": ["workflows", "cursor-sdk", "agents"],
+  "category": "developer-tools",
+  "tags": ["workflows", "agents", "cursor-sdk"],
+  "license": "MIT",
+  "skills": "./skills/"
+}
